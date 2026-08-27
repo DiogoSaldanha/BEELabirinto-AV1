@@ -15,7 +15,6 @@ along with Foobar.  If not, see <http://www.gnu.org/licenses/>. */
 
 import java.util.ArrayList;
 import java.util.Random;
-import java.lang.Math;
 
 /**
  * Classe que implementa o labirinto (problema) com funcionalidades de busca e
