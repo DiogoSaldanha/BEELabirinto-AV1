@@ -1,21 +1,4 @@
-/*This file is part of Labirinto.
-
-Labirinto is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or 
-(at your option) any later version.
-
-Labirinto is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with Foobar.  If not, see <http://www.gnu.org/licenses/>. */
-
-package Labirinto;
-
-import java.util.Vector;
+import java.util.ArrayList;
 
 /**
  * Classe que implementa o conceito de um nodo em uma árvore.
@@ -23,7 +6,7 @@ import java.util.Vector;
 public class Nodo{
 
 	private Nodo pai;
-	private Vector<Nodo> filho;
+	private ArrayList<Nodo> filho;
 	private Object valor;
 	private int profundidade;
 
@@ -35,7 +18,7 @@ public class Nodo{
 	 */
 	public Nodo (Nodo p, Object v){
 		pai   = p;
-		filho = new Vector<Nodo>();
+		filho = new ArrayList<>();
 		valor = v;
 
 		if (pai != null) {
@@ -86,8 +69,8 @@ public class Nodo{
 	 * Busca nodo filho.
 	 */
 	public Nodo getFilho(){
-		if (filho.size() > 0)
-			return filho.elementAt(0);
+		if (!filho.isEmpty())
+			return filho.get(0);
 		else
 			return null;
 	}
@@ -109,7 +92,7 @@ public class Nodo{
 	public Nodo getIrmao(Nodo i){
 		int posFilho = filho.indexOf(i);
 		if (filho.size() > posFilho+1) {
-			Nodo irmao = filho.elementAt(posFilho+1);
+			Nodo irmao = filho.get(posFilho+1);
 			return irmao;
 		} else
 			return null;

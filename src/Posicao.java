@@ -15,8 +15,6 @@ You should have received a copy of the GNU General Public License
 along with Foobar.  If not, see <http://www.gnu.org/licenses/>. 
 */
 
-package Labirinto;
-
 /**
  * Classe que representa uma posição no labirinto
  */
@@ -72,8 +70,9 @@ public class Posicao{
 	/**
 	 * Fornece a posição X,Y numa String.
 	 */
+	@Override
 	public String toString(){
-		return new String("(" + x + "," + y + ")");
+		return "(" + x + "," + y + ")";
 	}
 
 	/**
@@ -81,10 +80,7 @@ public class Posicao{
 	 * duas posições forem iguais, falso se for o contrário.
 	 */
 	public boolean comparaCom(Posicao p){
-		if (p != null && p.getX() == x & p.getY() == y)
-			return true;
-		else 
-			return false;
+            return p != null && p.getX() == x & p.getY() == y;
 	}
 
 
@@ -93,9 +89,6 @@ public class Posicao{
 	 * duas posições forem iguais, falso se for o contrário.
 	 */
 	public boolean comparaCom(int x, int y){
-		if (this.x == x & this.y == y)
-			return true;
-		else 
-			return false;
+            return this.x == x & this.y == y;
 	}
 }

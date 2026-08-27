@@ -13,10 +13,8 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Foobar.  If not, see <http://www.gnu.org/licenses/>. */
 
-package Labirinto;
-
+import java.util.ArrayList;
 import java.util.Random;
-import java.util.Vector;
 import java.lang.Math;
 
 /**
@@ -90,11 +88,11 @@ public class Labirinto{
 	 * redor.
 	 * @return Vetor de posições livres para se movimentar.
 	 */
-	public Vector<Posicao> getExpansao(Posicao p){
+	public ArrayList<Posicao> getExpansao(Posicao p){
 		int x = p.getX();
 		int y = p.getY();
 
-		Vector<Posicao> expansao = new Vector<Posicao>();
+		ArrayList<Posicao> expansao = new ArrayList<Posicao>();
 
 		if (x > 0 && labirinto[x-1][y] != 1)
 			expansao.add(new Posicao(x-1,y));

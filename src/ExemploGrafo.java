@@ -15,8 +15,7 @@ You should have received a copy of the GNU General Public License
 along with Foobar.  If not, see <http://www.gnu.org/licenses/>. 
 */
 
-import java.util.Vector;
-import Labirinto.*;
+import java.util.ArrayList;
 
 public class ExemploGrafo {
 
@@ -26,8 +25,8 @@ public class ExemploGrafo {
 	public static void main(String[] args) {
 
 		Nodo raiz = new Nodo(null, "raiz");
-		Vector<Nodo> nivelUm = new Vector<Nodo>();
-		Vector<Nodo> nivelDois = new Vector<Nodo>();
+		ArrayList<Nodo> nivelUm = new ArrayList<Nodo>();
+		ArrayList<Nodo> nivelDois = new ArrayList<Nodo>();
 		
 		nivelUm.add(new Nodo(raiz,"nivel1")); 
 		nivelUm.add(new Nodo(raiz,"nivel1")); 

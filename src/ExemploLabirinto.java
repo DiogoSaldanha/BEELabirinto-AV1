@@ -15,9 +15,8 @@ You should have received a copy of the GNU General Public License
 along with Foobar.  If not, see <http://www.gnu.org/licenses/>. 
 */
 
+import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.Vector;
-import Labirinto.*;
 
 public class ExemploLabirinto {
 
@@ -45,7 +44,7 @@ public class ExemploLabirinto {
 		p = labirinto.getPosicaoAtual();
 		
 		// Imprimir uma coleção de posições possíves a partir de uma posição
-		Vector<Posicao> expansao = labirinto.getExpansao(p);
+		ArrayList<Posicao> expansao = labirinto.getExpansao(p);
 		Iterator<Posicao> expansaoIt = expansao.iterator();
 		while (expansaoIt.hasNext()) {
 			p = (Posicao) expansaoIt.next();
