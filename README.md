@@ -16,7 +16,7 @@ Algoritmos *sem informação* utilizam métodos clássicos para busca em grafos,
 Mais informações sobre alternativas e pseudocódigos sobre algoritmos de BEE podem ser encontradas em Luger, Vieira e Tavares (2013)[^1], e Russel e Norvig (2013)[^2].
 
 ## Atividade
-Com base nesta especificação de problema, utilize os comportamentos disponíveis na classe Labirinto para testar algoritmos de busca. Então compare os resultados em termos de:
+Com base nesta especificação de problema, utilize os comportamentos disponíveis na classe Labirinto para testar algoritmos de busca. Elabore uma classe *Busca* com base na classe abstrata *AbstractBusca*. Então compare os resultados em termos de:
 - qualidade da resposta: a quantidade de passos /caminho da solução (i.e. menos passos, maior qualidade);
 - desepenho: tempo de execução e quantidade de memória utilizada.
 
