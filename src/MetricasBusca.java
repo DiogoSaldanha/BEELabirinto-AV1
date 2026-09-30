@@ -45,6 +45,26 @@ public class MetricasBusca {
         return tempoNs / 1_000_000.0;
     }
 
+    // Cabeçalho pra impressão em tabela comparativa
+    public static String cabecalho() {
+        return String.format("%-14s | %-10s | %-5s | %6s | %10s | %12s | %10s | %12s",
+            "Algoritmo", "Heuristica", "Achou", "Passos", "Expandidos",
+            "FronteiraMax", "Tempo(ms)", "Memoria(B)");
+    }
+
+    //linha dessa métrica, alinhada com o 'cabecalho()' pra montar a tabela.
+    public String linhaTabela() {
+        return String.format("%-14s | %-10s | %-5s | %6s | %10d | %12d | %10.3f | %12d",
+            algoritmo,
+            heuristica != null ? heuristica : "-",
+            encontrou ? "sim" : "nao",
+            encontrou ? String.valueOf(passos) : "-",
+            nosExpandidos,
+            fronteiraMaxima,
+            getTempoMs(),
+            memoriaBytes);
+    }
+
     @Override
     public String toString() {
         String nome = algoritmo + (heuristica != null ? " (" + heuristica + ")" : "");

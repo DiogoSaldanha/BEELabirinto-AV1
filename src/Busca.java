@@ -83,6 +83,14 @@ public class Busca extends AbstractBusca {
         return executar("BFS", null, fila::addLast, fila::pollFirst, fila::size, fila::isEmpty);
     }
 
+    // Busca em Profundidade - Fronteira LIFO (pilha)
+    // Acha um caminho se existir, mas nao garante o de menor numero de passos (dai o contraste de qualidade com o BFS).
+    // Usa o mesmo motor e a mesma expansao do BFS; muda só a ordem em que a fronteira devolve os nós
+    public Posicao[] buscarProfundidade() {
+        ArrayDeque<Nodo> pilha = new ArrayDeque<Nodo>();
+        return executar("DFS", null, pilha::addFirst, pilha::pollFirst, pilha::size, pilha::isEmpty);
+    }
+
     // Motor genérico de busca
 
     // Motor de busca compartilhado. A estratégia é definida pelas operações da
