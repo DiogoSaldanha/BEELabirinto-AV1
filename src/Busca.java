@@ -286,9 +286,10 @@ public class Busca extends AbstractBusca {
 
 
     // Estimativa de memória em uso no heap (bytes)
+    // so faz sentido agregada (media no ExperimentoBusca). Sem System.gc(): aí ele deixava o
+    // experimento lento e ainda contaminava a medição de tempo.
     private long memoriaUsada() {
         Runtime rt = Runtime.getRuntime();
-        System.gc();
         return rt.totalMemory() - rt.freeMemory();
     }
 
